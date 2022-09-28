@@ -13,6 +13,12 @@ public class UseCase
 
         product.Name = "NewName"; // fail
 
+        var cart = new ShoppingCart
+        {
+            Product = product
+        };
+        cart.Product.Name = "NewName"; // fail
+
         product.Rename("NewName"); // ok
     }
 }
